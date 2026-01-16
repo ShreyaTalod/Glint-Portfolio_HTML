@@ -1,0 +1,400 @@
+/* ===============================
+   GLOBAL UNIFORM BACKGROUND FIX
+   =============================== */
+
+/* Page base */
+html,
+body {
+  background-color: #1b1b1b !important;
+}
+
+/* Main wrapper */
+.main-wrapper,
+.main-content,
+.site-content {
+  background-color: #1b1b1b !important;
+}
+
+/* All major sections */
+section,
+.section,
+.content-section,
+.wrapper {
+  background-color: #1b1b1b !important;
+}
+
+/* Services / cards area */
+.services-area,
+.services-section,
+.service-area,
+.features-area {
+  background-color: #1b1b1b !important;
+}
+
+/* Newsletter section (THIS is the big white one) */
+.newsletter-area,
+.newsletter-section,
+.subscribe-area {
+  background-color: #1b1b1b !important;
+}
+
+/* World map background overlay */
+.newsletter-area::before,
+.newsletter-section::before {
+  background: none !important;
+  opacity: 0 !important;
+}
+
+/* Any explicit white/light background utilities */
+.bg-white,
+.bg-light {
+  background-color: #1b1b1b !important;
+}
+
+/* ===============================
+   FORCE NEWSLETTER BACKGROUND
+   =============================== */
+
+/* Outer newsletter section */
+.newsletter-area,
+.newsletter-section,
+.subscribe-area {
+  background-color: #1b1b1b !important;
+}
+
+/* Inner wrapper that keeps it white */
+.newsletter-area>div,
+.newsletter-section>div,
+.subscribe-area>div {
+  background-color: #1b1b1b !important;
+}
+
+/* Remove map / image overlay */
+.newsletter-area::before,
+.newsletter-section::before,
+.subscribe-area::before {
+  background: none !important;
+  content: none !important;
+}
+
+/* If background image is applied inline */
+.newsletter-area * {
+  background-image: none !important;
+}
+
+/* ===============================
+   FORCE REMOVE ANY BACKGROUND
+   =============================== */
+
+/* Kill ALL inline background colors & images */
+.newsletter-area,
+.newsletter-area *,
+.subscribe-area,
+.subscribe-area * {
+  background-color: #1b1b1b !important;
+  background-image: none !important;
+}
+
+/* Kill overlay layers */
+.newsletter-area::before,
+.newsletter-area::after,
+.subscribe-area::before,
+.subscribe-area::after {
+  content: none !important;
+  background: none !important;
+}
+
+/* Kill absolute positioned background divs */
+.newsletter-area [class*="bg"],
+.subscribe-area [class*="bg"] {
+  background: none !important;
+}
+
+
+
+/* Header */
+header,
+.site-header,
+.main-header {
+  background-color: #0b0b0b !important;
+}
+
+/* Footer */
+footer,
+.site-footer {
+  background-color: #0b0b0b !important;
+}
+
+/* Main content background */
+body {
+  background-color: #141414 !important;
+}
+
+/* Common white background sections */
+section,
+.main-content,
+.content-area,
+.cta-area,
+.newsletter,
+.call-to-action,
+.features,
+.services,
+.portfolio,
+.blog,
+.testimonials {
+  background-color: #141414 !important;
+}
+
+
+
+/* Newsletter / CTA section base */
+.cta-area {
+  background-color: #141414 !important;
+  /* same as content area */
+  position: relative;
+  overflow: hidden;
+}
+
+/* World map overlay */
+.cta-area::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/bg/world-map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 85%;
+  opacity: 0.08;
+  /* VERY subtle */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep text & inputs above map */
+.cta-area>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===============================
+   FORCE LIGHT TEXT COLOR
+   =============================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff !important;
+}
+
+a {
+  color: #e0e0e0;
+}
+
+a:hover {
+  color: #08d665;
+}
+
+/* Ensure paragraph text is also visible */
+p,
+li,
+span,
+div {
+  color: #ffffff;
+  /* inherit body color usually, but force to be safe */
+}
+
+/* except specific overrides if needed */
+.text-dark {
+  color: #1b1b1b !important;
+}
+
+/* ===============================
+   BLOG CONTAINER BACKGROUNDS
+   =============================== */
+.single-blog-section-description,
+.blog-box,
+.single-blog-post {
+  background-color: #262626 !important;
+  /* Dark card background */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Specific layout for Recent Posts */
+.single-blog-post {
+  display: flex !important;
+  align-items: center !important;
+  /* Vertically center image and text */
+  margin-bottom: 20px;
+}
+
+.single-blog-post img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  border-radius: 5px;
+  margin-right: 30px !important;
+  /* Increased gap as requested */
+  margin-bottom: 0 !important;
+  flex-shrink: 0 !important;
+  /* Prevent image from shrinking */
+  float: none !important;
+  /* Ensure no floats interfere */
+}
+
+.single-blog-post a {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* ===============================
+   BLOG SPECIFIC TEXT COLOR FIXES
+   =============================== */
+.single-blog-section-description p,
+.single-blog-section-author li a,
+.blog-author-image h6,
+.blog-author-image p,
+.blog-box p,
+.single-blog-post p,
+.single-blog-post a,
+.blog-categores li a,
+.blog-tag li a,
+.related_tags h3,
+.single_comment h4,
+.comment_text p,
+.single-blog-section-description h4 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  /* Override opacity .7 if present */
+}
+
+/* border-color: #444 !important; */
+/* Make border visible but subtle */
+
+
+/* ===============================
+   QUOTE SECTION BACKGROUND FIX
+   =============================== */
+.quote-sectionl,
+.single-quote {
+  background-color: #141414 !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.quote-sectionl h6,
+.single-quote h6 {
+  color: #ffffff !important;
+  /* Ensure text remains visible */
+}
+
+/* ===============================
+   CONTACT PAGE REFINEMENT
+   =============================== */
+.contact-form,
+.map {
+  background-color: #262626;
+  /* Dark card background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  /* Match heights if possible */
+}
+
+/* Map specific tweaks ensure it fits the card */
+.map iframe {
+  border-radius: 8px;
+  display: block;
+}
+
+/* Form input styling */
+.contact-form .form-control {
+  background-color: #1b1b1b;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.contact-form .form-control:focus {
+  border-color: #08d665;
+  box-shadow: none;
+  background-color: #1b1b1b;
+}
+
+.contact-form .form-control::placeholder {
+  color: #888;
+}
+
+.contact-title h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.contact-form #submit {
+  background-color: #08d665;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact-form #submit:hover {
+  background-color: #06b555;
+}
+
+/* ===============================
+   COMMENT IMAGE FIX
+   =============================== */
+.comment_img img {
+  height: 80px;
+  /* Enforce square dimensions */
+  width: 80px;
+  border-radius: 50%;
+  /* Make it circular as intended */
+  object-fit: cover;
+  /* Crop to fit, don't distort */
+}
+
+/* ===============================
+   TESTIMONIAL IMAGE FIX
+   =============================== */
+.testimonial-img img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===============================
+   FUN FACTS NUMBERS COLOR FIX
+   =============================== */
+.fun-facts h2 {
+  color: #000000 !important;
+}
+
+/* ===============================
+   CTA BUTTON FIX
+   =============================== */
+.cta-form a.subscribe-btn {
+  width: auto !important;
+  float: none !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
